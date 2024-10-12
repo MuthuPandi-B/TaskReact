@@ -36,14 +36,14 @@ const MovieDetail = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto pl-8">
       {movie && (
         <div className="movie-detail">
           <h1 className="text-3xl font-bold mb-4">{movie.Title}</h1>
           <img
             src={movie.Poster}
             alt={movie.Title}
-            className="w-full max-w-md mx-auto mb-6"
+            className=" max-w-md  mb-6 h-72 "
           />
           <p className="mb-2">
             <strong>Year:</strong> {movie.Year}
@@ -62,7 +62,7 @@ const MovieDetail = () => {
           </p>
           <button
             onClick={() => navigate(-1)}
-            className="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md"
+            className="px-4 py-2 mt-4 bg-red-600 text-white rounded-md"
           >
             Back to Movies
           </button>

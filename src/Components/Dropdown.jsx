@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const Dropdown = ({ categories, onCategorySelect }) => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('movie');
 
   const handleChange = (e) => {
     setSelectedCategory(e.target.value);

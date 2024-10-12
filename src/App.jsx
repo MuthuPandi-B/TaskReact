@@ -14,7 +14,7 @@ const App = () => {
   const [page, setPage] = useState(1); // Track current page
   const [totalResults, setTotalResults] = useState(0); // For pagination
 
-  const categories = [ 'All','movie', 'series', 'episode'];
+  const categories = [ 'movie', 'series', 'episode'];
 
   // Fetch initial movies on load (you can modify the query for specific movies)
   useEffect(() => {
