@@ -15,13 +15,14 @@ const App = () => {
   const [totalResults, setTotalResults] = useState(0); // For pagination
 
   const categories = [ 'movie', 'series', 'episode'];
+ 
 
-  // Fetch initial movies on load (you can modify the query for specific movies)
+  // Fetch initial movies on load 
   useEffect(() => {
     const loadInitialMovies = async () => {
-      const data = await fetchMovies('avengers', 1, category); // Default query like 'avengers'
+      const data = await fetchMovies('avengers', 1, category); 
       setMovies(data.Search || []);
-      setTotalResults(data.totalResults || 0); // Total number of results from the API
+      setTotalResults(data.totalResults || 0); 
     };
     loadInitialMovies();
   }, [category]);
@@ -30,8 +31,8 @@ const App = () => {
     const data = await fetchMovies(query, 1, category);
     setMovies(data.Search || []);
     setQuery(query);
-    setPage(1); // Reset to first page on new search
-    setTotalResults(data.totalResults || 0); // Set total results for pagination
+    setPage(1); 
+    setTotalResults(data.totalResults || 0); 
   };
 
   const handleCategorySelect = (selectedCategory) => {
@@ -40,9 +41,9 @@ const App = () => {
 
   // Function to handle pagination
   const handlePageChange = async (newPage) => {
-    const data = await fetchMovies(query || 'avengers', newPage, category); // Default query if no search
+    const data = await fetchMovies(query || 'avengers', newPage, category); 
     setMovies(data.Search || []);
-    setPage(newPage); // Update current page
+    setPage(newPage); 
   };
 
   return (

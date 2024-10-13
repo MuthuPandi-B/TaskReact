@@ -10,7 +10,7 @@ const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Get movie ID from location state
+
   const movieId = location.state?.movieId;
 
   useEffect(() => {

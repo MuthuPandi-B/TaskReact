@@ -8,10 +8,10 @@ const HomePage = () => {
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
 
-  // Fetch initial movies on load (you can modify the query for specific movies)
+  // Fetch initial movies on load 
   useEffect(() => {
     const loadInitialMovies = async () => {
-      const data = await fetchMovies('avengers', page); // Fetch movies using a default query like 'avengers'
+      const data = await fetchMovies('avengers', page); 
       setMovies(data.Search || []);
       setTotalResults(data.totalResults || 0);
     };
